@@ -91,17 +91,17 @@ tracks collection calls (`f3`, r=0.58) — these clusters map directly onto the 
 economic terms. `f5` correlates with nothing (max |r|=0.16), which is why it was flagged
 as noise before any submission was spent on it.
 
-![Correlation heatmap](figures/correlation_heatmap.png)
+![Correlation heatmap](correlation_heatmap.png)
 
 **Lower-triangle view** (same data, easier to read):
 
-![Correlation heatmap — lower triangle](figures/correlation_heatmap_triangle.png)
+![Correlation heatmap — lower triangle](correlation_heatmap_triangle.png)
 
 **Most connected features** — total absolute correlation per feature. The spend cluster
 (`f6`, `f10`, `f7`, `f9`, `f8`) dominates, confirming spend as the primary structured signal
 and justifying its consolidation into a single Spend term:
 
-![Most connected features](figures/most_connected_features.png)
+![Most connected features](most_connected_features.png)
 
 ## Methodology note
 
@@ -114,11 +114,10 @@ exhausted before spending any (scarce) submission.
 
 ```
 ├── README.md                    # this file
-├── src/
-│   ├── profitability_model.py   # the final model — reproduces the 0.883 submission
-│   ├── exploratory_analysis.py  # EDA: feature decode, capping, f5-island, correlation clusters
-│   └── make_figures.py          # regenerates the figures below
-├── figures/                     # correlation heatmaps + most-connected-features chart
+├── profitability_model.py       # the final model — reproduces the 0.883 submission
+├── exploratory_analysis.py      # EDA: feature decode, capping, f5-island, correlation clusters
+├── make_figures.py              # regenerates the figures below
+├── correlation_heatmap.png      # + triangle + most_connected_features.png
 ├── experiment_log.md            # full hypothesis → result → learning log
 ├── requirements.txt
 └── .gitignore                   # excludes the (proprietary) competition data
@@ -131,9 +130,9 @@ the data file in place, the analysis reproduces end to end:
 
 ```bash
 pip install -r requirements.txt
-python src/profitability_model.py     # writes the ranked predictions (0.883 submission)
-python src/exploratory_analysis.py    # prints the EDA findings
-python src/make_figures.py            # regenerates the figures above
+python profitability_model.py     # writes the ranked predictions (0.883 submission)
+python exploratory_analysis.py    # prints the EDA findings
+python make_figures.py            # regenerates the figures above
 ```
 
 ---
