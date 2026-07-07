@@ -138,4 +138,4 @@ python make_figures.py            # regenerates the figures above
 ---
 
 *American Express Campus Challenge 2026 — Round 1, Strategy Track.*
-*Author: [Arush Chandra] · Teammate: Naba Fatima*
+*Author: Arush Chandra · Teammate: Naba Fatima*
