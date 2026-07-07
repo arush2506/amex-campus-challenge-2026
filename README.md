@@ -124,23 +124,19 @@ exhausted before spending any (scarce) submission.
 └── .gitignore                   # excludes the (proprietary) competition data
 ```
 
-## How to run
+## Reproducing
+
+The competition dataset is proprietary to American Express and is **not** included here. With
+the data file in place, the analysis reproduces end to end:
 
 ```bash
 pip install -r requirements.txt
-# place the competition CSV at data/campus_challenge_r1_data.csv (not included — see below)
-python src/profitability_model.py     # writes predictions in the submission format
+python src/profitability_model.py     # writes the ranked predictions (0.883 submission)
 python src/exploratory_analysis.py    # prints the EDA findings
-python src/make_figures.py             # regenerates the figures/ PNGs
+python src/make_figures.py            # regenerates the figures above
 ```
-
-## A note on the data
-
-The competition dataset is proprietary to American Express and is **not** included in this
-repository. The code expects it at `data/campus_challenge_r1_data.csv` and runs unchanged
-once that file is present.
 
 ---
 
-*Round 1 of the American Express Campus Challenge 2026 (Strategy Track). Framework, code and
-experiment design documented for reproducibility.*
+*American Express Campus Challenge 2026 — Round 1, Strategy Track.*
+*Author: [Your Name] · Teammate: Naba Fatima*
